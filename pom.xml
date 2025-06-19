@@ -8,11 +8,11 @@
         <version>2.7.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.dobrynin.spring.springboot</groupId>
-    <artifactId>spring_course_springboot</artifactId>
+    <groupId>com.vavilova.spring.springboot</groupId>
+    <artifactId>pm_02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring_course_springboot</name>
-    <description>spring_course_springboot</description>
+    <name>pm_02</name>
+    <description>pm_02</description>
     <properties>
         <java.version>17</java.version>
     </properties>

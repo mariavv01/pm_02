@@ -1,6 +1,6 @@
-package com.dobrynin.spring.springboot.spring_course_springboot.dao;
+package com.vavilova.spring.springboot.pm_02.repository;
 
-import com.dobrynin.spring.springboot.spring_course_springboot.entity.Provider;
+import com.vavilova.spring.springboot.pm_02.entity.Provider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

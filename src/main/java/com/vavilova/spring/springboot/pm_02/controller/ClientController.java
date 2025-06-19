@@ -1,7 +1,7 @@
-package com.dobrynin.spring.springboot.spring_course_springboot.controller;
+package com.vavilova.spring.springboot.pm_02.controller;
 
-import com.dobrynin.spring.springboot.spring_course_springboot.entity.Employee;
-import com.dobrynin.spring.springboot.spring_course_springboot.service.EmployeeService;
+import com.vavilova.spring.springboot.pm_02.entity.Account;
+import com.vavilova.spring.springboot.pm_02.service.EmployeeService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,23 +16,23 @@ public class ClientController {
   }
 
   @GetMapping("/add")
-  public List<Employee> showAllEmployees() {
+  public List<Account> showAllEmployees() {
     return employeeService.getAllEmployees();
   }
 
   @GetMapping("/get/{id}")
-  public Employee getEmployee(@PathVariable int id) {
+  public Account getEmployee(@PathVariable int id) {
     return employeeService.getEmployee(id);
   }
 
   @PostMapping("/employees")
-  public Employee addNewEmployee(@RequestBody Employee employee) {
+  public Account addNewEmployee(@RequestBody Account employee) {
     employeeService.saveEmployee(employee);
     return employee;
   }
 
   @PutMapping("/employees")
-  public Employee updateEmployee(@RequestBody Employee employee) {
+  public Account updateEmployee(@RequestBody Account employee) {
     employeeService.saveEmployee(employee);
     return employee;
   }

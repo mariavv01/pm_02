@@ -1,7 +1,7 @@
-package com.dobrynin.spring.springboot.spring_course_springboot.service;
+package com.vavilova.spring.springboot.pm_02.service;
 
-import com.dobrynin.spring.springboot.spring_course_springboot.dao.ProviderDAO;
-import com.dobrynin.spring.springboot.spring_course_springboot.entity.Provider;
+import com.vavilova.spring.springboot.pm_02.repository.ProviderDAO;
+import com.vavilova.spring.springboot.pm_02.entity.Provider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

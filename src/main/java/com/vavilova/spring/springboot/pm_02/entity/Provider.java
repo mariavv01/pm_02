@@ -1,4 +1,4 @@
-package com.dobrynin.spring.springboot.spring_course_springboot.entity;
+package com.vavilova.spring.springboot.pm_02.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

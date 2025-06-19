@@ -1,8 +1,8 @@
-package com.dobrynin.spring.springboot.spring_course_springboot.service;
+package com.vavilova.spring.springboot.pm_02.service;
 
 
-import com.dobrynin.spring.springboot.spring_course_springboot.dao.EmployeeDAO;
-import com.dobrynin.spring.springboot.spring_course_springboot.entity.Employee;
+import com.vavilova.spring.springboot.pm_02.repository.EmployeeDAO;
+import com.vavilova.spring.springboot.pm_02.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,19 +17,19 @@ public class EmployeeServiceImpl implements EmployeeService {
 
   @Override
   @Transactional
-  public List<Employee> getAllEmployees() {
+  public List<Account> getAllEmployees() {
     return employeeDAO.getAllEmployees();
   }
 
   @Override
   @Transactional
-  public void saveEmployee(Employee employee) {
+  public void saveEmployee(Account employee) {
     employeeDAO.saveEmployee(employee);
   }
 
   @Override
   @Transactional
-  public Employee getEmployee(int id) {
+  public Account getEmployee(int id) {
     return employeeDAO.getEmployee(id);
   }
 

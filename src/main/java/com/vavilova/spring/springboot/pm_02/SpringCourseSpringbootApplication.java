@@ -1,4 +1,4 @@
-package com.dobrynin.spring.springboot.spring_course_springboot;
+package com.vavilova.spring.springboot.pm_02;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
