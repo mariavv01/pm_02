@@ -1,6 +1,7 @@
 package com.vavilova.spring.springboot.pm_02.entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,10 +9,11 @@ import java.util.Date;
 @Entity
 @Table(name = "account")
 @Data
+@NoArgsConstructor
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
@@ -22,6 +24,7 @@ public class Account {
     private String fullName;
 
     @Column(name = "update_at")
+    @Temporal(TemporalType.DATE)
     private Date updateAt;
 
     @Column(name = "user_id")

@@ -1,5 +1,6 @@
 package com.vavilova.spring.springboot.pm_02.entity;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,23 +8,16 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employee")
-@Getter
-@Setter
+@Table(name = "provider")
+@Data
 @NoArgsConstructor
 public class Provider {
     @Id
     @Column(name = "id")
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-    @Column(name = "short_name")
-    private String short_name;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "full_name")
-    private String full_name;
-
-    public Provider(String short_name, String full_name) {
-        this.short_name = short_name;
-        this.full_name = full_name;
-    }
 }
