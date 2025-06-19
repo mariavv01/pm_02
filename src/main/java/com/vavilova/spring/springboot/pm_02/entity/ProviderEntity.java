@@ -1,9 +1,7 @@
 package com.vavilova.spring.springboot.pm_02.entity;
 
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -11,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "provider")
 @Data
 @NoArgsConstructor
-public class Provider {
+public class ProviderEntity {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
