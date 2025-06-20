@@ -8,7 +8,9 @@ import com.vavilova.spring.springboot.pm_02.model.UserModel;
 import com.vavilova.spring.springboot.pm_02.repository.AccountRepository;
 import com.vavilova.spring.springboot.pm_02.repository.ProviderRepository;
 import com.vavilova.spring.springboot.pm_02.repository.UserRepository;
+import com.vavilova.spring.springboot.pm_02.repository.UserSpecification;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -101,6 +103,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public Integer getDeletedUserCount() {
         return userRepository.countAllByIsDeletedIsTrue();
+    }
+
+    @Override
+    public List<UserModel> searchUsersByParameters(String phone, String email) {
+        Specification<UserEntity> spec = Specification
+                .where(UserSpecification.hasUserEmail(email))
+                .and(UserSpecification.hasUserPhone(phone));
+        return userRepository.findAll(spec)
+                .stream()
+                .map(getUserEntityUserModelFunction())
+                .toList();
     }
 
     private Function<UserEntity, UserModel> getUserEntityUserModelFunction() {

@@ -19,4 +19,6 @@ public interface UserService {
     Integer getUserCount(boolean isEmail);
 
     Integer getDeletedUserCount();
+
+    List<UserModel> searchUsersByParameters(String phone, String email);
 }

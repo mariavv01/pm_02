@@ -1,6 +1,5 @@
 package com.vavilova.spring.springboot.pm_02.model;
 
-import com.vavilova.spring.springboot.pm_02.entity.ProviderEntity;
 import lombok.Data;
 
 import java.time.LocalDate;
